@@ -1,11 +1,45 @@
 import React from 'react';
 
-const List = props => {
-  return (
-    <div>
-    Hey girl
-    </div>
-  )
-}
+var List = React.createClass({
+  getInitialState: function() {
+    return {
+      items: []
+    };
+  },
+
+  addItem: function(e){
+    let itemArray = this.state.items;
+
+    itemArray.push (
+      {
+        text: this._inputElement.value,
+        key: Date.now()
+      }
+    );
+
+    this.setState({
+      items: itemArray
+    });
+
+    this._inputElement.value = " ";
+
+    e.preventDefault();
+
+  },
+  render: function() {
+      return (
+        <div className="todoListMain">
+          <div className="header">
+            <form onSubmit={this.addItem}>
+            <input ref={(a) => this._inputElement = a}
+              placeholder="enter task">
+              </input>
+              <button type="submit">add</button>
+            </form>
+          </div>
+        </div>
+      );
+    }
+});
 
 export default List;
