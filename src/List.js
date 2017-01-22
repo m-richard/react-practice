@@ -1,6 +1,7 @@
 import React from 'react';
+import ListItems from './ListItems';
 
-var List = React.createClass({
+let List = React.createClass({
   getInitialState: function() {
     return {
       items: []
@@ -37,6 +38,7 @@ var List = React.createClass({
               <button type="submit">add</button>
             </form>
           </div>
+          <ListItems entries={this.state.items}/>
         </div>
       );
     }
