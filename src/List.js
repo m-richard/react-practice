@@ -18,6 +18,16 @@ let List = React.createClass({
       }
     );
 
+  // deleteItem: function() {
+  //   let itemArray = this.state.items;
+  //
+  //   itemArray.pop (
+  //     {
+  //       this.state.items
+  //     }
+  //   )
+  // }
+
     this.setState({
       items: itemArray
     });
