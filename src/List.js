@@ -22,7 +22,9 @@ let List = React.createClass({
   //   let itemArray = this.state.items;
   //
   //   itemArray.pop (
-  //
+  //     {
+  //       this.state.items
+  //     }
   //   )
   // }
 
