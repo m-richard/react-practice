@@ -45,7 +45,7 @@ let List = React.createClass({
             <input ref={(a) => this._inputElement = a}
               placeholder="enter task">
               </input>
-              <button type="submit">add</button>
+              <button type="submit">Add</button>
             </form>
           </div>
           <ListItems entries={this.state.items}/>
