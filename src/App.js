@@ -7,7 +7,7 @@ import ListItems from './ListItems';
 class App extends Component {
   render() {
     return (
-      <div>Hello World
+      <div>My List!
       <List/>
       </div>
     );
